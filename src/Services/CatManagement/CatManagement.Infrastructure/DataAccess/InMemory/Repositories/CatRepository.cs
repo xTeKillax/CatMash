@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using CatManagement.Domain.CatObject;
@@ -20,6 +21,13 @@ namespace CatManagement.Infrastructure.DataAccess.InMemory.Repositories
             Cat cat = _context.Cats.Where(x => x.Id == id).SingleOrDefault();
 
             return await Task.FromResult<Cat>(cat);
+        }
+
+        public async Task<IQueryable<Cat>> Get()
+        {
+            IQueryable<Cat> cats = _context.Cats.AsQueryable();
+
+            return await Task.FromResult<IQueryable<Cat>>(cats);
         }
 
         public async Task Update(Cat cat)
