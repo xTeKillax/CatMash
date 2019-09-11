@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cat.api:
+    image: catmash/cat.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Cat/Cat.API/Dockerfile
