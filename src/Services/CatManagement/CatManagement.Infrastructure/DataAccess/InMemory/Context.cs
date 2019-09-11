@@ -11,11 +11,11 @@ namespace CatManagement.Infrastructure.DataAccess.InMemory
         {
             Cats = new Collection<Cat>();
 
-            Cats.Add(new Cat(1, "photo-1.jpg"));
-            Cats.Add(new Cat(2, "photo-2.jpg"));
-            Cats.Add(new Cat(3, "photo-3.jpg"));
-            Cats.Add(new Cat(4, "photo-4.jpg"));
-            Cats.Add(new Cat(5, "photo-5.jpg"));
+            Cats.Add(new Cat(1, "photo-1.jpg", 0));
+            Cats.Add(new Cat(2, "photo-2.jpg", 0));
+            Cats.Add(new Cat(3, "photo-3.jpg", 0));
+            Cats.Add(new Cat(4, "photo-4.jpg", 0));
+            Cats.Add(new Cat(5, "photo-5.jpg", 0));
 
         }
     }
