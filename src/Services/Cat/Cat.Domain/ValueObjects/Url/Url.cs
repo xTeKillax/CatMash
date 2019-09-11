@@ -9,7 +9,7 @@
             if (string.IsNullOrEmpty(text))
                 throw new UrlShouldNotBeEmptyException($"The '{nameof(Url)}' field is required");
 
-            Text = text;
+            this.Text = text;
         }
 
         public override string ToString()
