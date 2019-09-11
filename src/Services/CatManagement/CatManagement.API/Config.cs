@@ -1,4 +1,4 @@
-﻿namespace Cat.API
+﻿namespace CatManagement.API
 {
     public class Config
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cat.API.Controllers
+namespace CatManagement.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cat.Domain
+namespace CatManagement.Domain
 {
     public class DomainException : Exception
     {

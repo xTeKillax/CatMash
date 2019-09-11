@@ -1,4 +1,4 @@
-﻿namespace Cat.Domain.ValueObjects.Score
+﻿namespace CatManagement.Domain.ValueObjects.Score
 {
     public class ScoreShouldNotBeNegative : DomainException
     {

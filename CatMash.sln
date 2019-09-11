@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F3
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2F906C00-9651-417A-898B-19C3A1290D4B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cat.API", "src\Services\Cat\Cat.API\Cat.API.csproj", "{E3ED2D97-2EE1-47DF-A516-BDC952AF2F08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatManagement.API", "src\Services\CatManagement\CatManagement.API\CatManagement.API.csproj", "{E3ED2D97-2EE1-47DF-A516-BDC952AF2F08}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cat", "Cat", "{1D13B147-07C0-4000-AD17-3B8AC5E95052}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatManagement", "CatManagement", "{1D13B147-07C0-4000-AD17-3B8AC5E95052}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cat.Infrastructure", "src\Services\Cat\Cat.Infrastructure\Cat.Infrastructure.csproj", "{C7281CC8-24E0-4067-BCE0-ECB03652A74E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatManagement.Infrastructure", "src\Services\CatManagement\CatManagement.Infrastructure\CatManagement.Infrastructure.csproj", "{C7281CC8-24E0-4067-BCE0-ECB03652A74E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cat.Domain", "src\Services\Cat\Cat.Domain\Cat.Domain.csproj", "{D7993618-2204-4574-9FEB-DA71E1708D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatManagement.Domain", "src\Services\CatManagement\CatManagement.Domain\CatManagement.Domain.csproj", "{D7993618-2204-4574-9FEB-DA71E1708D79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

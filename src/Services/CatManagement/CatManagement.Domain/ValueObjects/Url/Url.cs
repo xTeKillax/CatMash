@@ -1,4 +1,4 @@
-﻿namespace Cat.Domain.ValueObjects.Url
+﻿namespace CatManagement.Domain.ValueObjects.Url
 {
     public class Url
     {

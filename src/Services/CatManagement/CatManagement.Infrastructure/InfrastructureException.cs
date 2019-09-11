@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cat.Infrastructure
+namespace CatManagement.Infrastructure
 {
     public class InfrastructureException : Exception
     {

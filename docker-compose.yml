@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  cat.api:
-    image: catmash/cat.api:${TAG:-latest}
+  catmanagement.api:
+    image: catmash/catmanagement.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Cat/Cat.API/Dockerfile
+      dockerfile: src/Services/CatManagement/CatManagement.API/Dockerfile

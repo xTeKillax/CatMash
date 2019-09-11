@@ -1,7 +1,7 @@
-﻿using Cat.Domain.ValueObjects.Score;
-using Cat.Domain.ValueObjects.Url;
+﻿using CatManagement.Domain.ValueObjects.Score;
+using CatManagement.Domain.ValueObjects.Url;
 
-namespace Cat.Domain.Cat
+namespace CatManagement.Domain.CatObject
 {
     public class Cat
     {
