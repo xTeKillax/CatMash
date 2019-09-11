@@ -1,0 +1,11 @@
+﻿{
+  "defaultAssembly": "CatManagement.Infrastructure",
+  "modules": [
+    {
+      "type": "CatManagement.Infrastructure.Module"
+    },
+    {
+      "type": "CatManagement.Infrastructure.DataAccess.InMemory.Module"
+    }
+  ]
+}
