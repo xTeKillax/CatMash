@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CatManagement.Domain;
 
 namespace CatManagement.Infrastructure
 {
@@ -7,6 +8,10 @@ namespace CatManagement.Infrastructure
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterAssemblyTypes(typeof(InfrastructureException).Assembly)
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterAssemblyTypes(typeof(DomainException).Assembly)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

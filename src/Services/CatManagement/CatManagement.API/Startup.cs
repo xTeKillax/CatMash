@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Swashbuckle.AspNetCore.Swagger;
+using Autofac;
+using Autofac.Configuration;
 
 namespace CatManagement.API
 {
@@ -48,10 +50,13 @@ namespace CatManagement.API
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
-
-            services.AddOptions();
         }
-        
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new ConfigurationModule(Configuration));
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             var pathBase = Configuration["PATH_BASE"];

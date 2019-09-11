@@ -7,14 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="UseCases\Vote\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="2.2.4" />
+    <PackageReference Include="Autofac.Configuration" Version="4.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="2.2.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CatManagement.Domain\CatManagement.Domain.csproj" />
+    <ProjectReference Include="..\CatManagement.Infrastructure\CatManagement.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

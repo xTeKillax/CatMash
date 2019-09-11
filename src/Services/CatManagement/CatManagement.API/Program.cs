@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Autofac.Extensions.DependencyInjection;
 
 namespace CatManagement.API
 {
@@ -24,6 +19,7 @@ namespace CatManagement.API
                 {
                     config.AddJsonFile("autofac.json");
                     config.AddEnvironmentVariables();
-                });
+                })
+                .ConfigureServices(services => services.AddAutofac());
     }
 }
