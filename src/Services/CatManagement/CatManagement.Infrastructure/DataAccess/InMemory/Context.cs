@@ -1,5 +1,10 @@
 ﻿using CatManagement.Domain.CatObject;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.ObjectModel;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace CatManagement.Infrastructure.DataAccess.InMemory
 {
@@ -9,14 +14,41 @@ namespace CatManagement.Infrastructure.DataAccess.InMemory
 
         public Context()
         {
-            Cats = new Collection<Cat>();
+            Cats = GetCats().GetAwaiter().GetResult();
+        }
 
-            Cats.Add(new Cat(1, "photo-1.jpg", 0));
-            Cats.Add(new Cat(2, "photo-2.jpg", 0));
-            Cats.Add(new Cat(3, "photo-3.jpg", 0));
-            Cats.Add(new Cat(4, "photo-4.jpg", 0));
-            Cats.Add(new Cat(5, "photo-5.jpg", 0));
+        private async Task<Collection<Cat>> GetCats()
+        {
+            string baseUrl = "https://latelier.co/data/cats.json";
 
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    using (HttpResponseMessage res = await client.GetAsync(baseUrl))
+                    {
+                        using (HttpContent content = res.Content)
+                        {
+                            var data = await content.ReadAsStringAsync();
+
+                            if (content != null)
+                            {
+                                Collection<Cat> catList = JObject.Parse(data)["images"].ToObject<Collection<Cat>>();
+
+                                return await Task.FromResult(catList);
+                            }
+                            else
+                            {
+                                throw new InfrastructureException("There is no cat to fetch.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new InfrastructureException("Error while fetching cats.");
+            }
         }
     }
 }
