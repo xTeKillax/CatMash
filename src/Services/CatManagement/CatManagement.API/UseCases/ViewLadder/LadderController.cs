@@ -21,7 +21,8 @@ namespace CatManagement.API.UseCases.ViewLadder
             _catWriteOnlyRepository = catWriteOnlyRepository;
         }
         
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
             return new ObjectResult(await _catReadOnlyRepository.Get());
         }
