@@ -63,5 +63,10 @@
         {
             return score1.Value >= score2.Value;
         }
+
+        public override bool Equals(object score)
+        {
+            return ((Score)score).Value == Value;
+        }
     }
 }

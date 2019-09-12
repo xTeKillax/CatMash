@@ -10,6 +10,9 @@ COPY . .
 WORKDIR /src/src/Services/CatManagement/CatManagement.API
 RUN dotnet build CatManagement.API.csproj -c Release -o /app
 
+FROM build as unittest
+WORKDIR /src/src/Services/CatManagement/tests/CatManagement.UnitTests
+
 FROM build AS publish
 RUN dotnet publish CatManagement.API.csproj -c Release -o /app
 
