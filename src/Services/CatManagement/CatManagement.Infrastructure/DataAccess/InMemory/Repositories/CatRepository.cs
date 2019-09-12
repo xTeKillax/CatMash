@@ -16,18 +16,18 @@ namespace CatManagement.Infrastructure.DataAccess.InMemory.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<Cat> Get(int id)
+        public async Task<Cat> Get(string id)
         {
             Cat cat = _context.Cats.Where(x => x.Id == id).SingleOrDefault();
 
-            return await Task.FromResult<Cat>(cat);
+            return await Task.FromResult(cat);
         }
 
         public async Task<IQueryable<Cat>> Get()
         {
             IQueryable<Cat> cats = _context.Cats.AsQueryable();
 
-            return await Task.FromResult<IQueryable<Cat>>(cats);
+            return await Task.FromResult(cats);
         }
 
         public async Task Update(Cat cat)

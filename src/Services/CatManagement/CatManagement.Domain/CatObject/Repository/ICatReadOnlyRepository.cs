@@ -5,7 +5,7 @@ namespace CatManagement.Domain.CatObject.Repository
 {
     public interface ICatReadOnlyRepository
     {
-        Task<Cat> Get(int id);
+        Task<Cat> Get(string id);
         Task<IQueryable<Cat>> Get();
     }
 }

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace CatManagement.API.UseCases.ViewLadder
 {
     [Route("api/[controller]")]
-    public class ViewLadderController : Controller
+    public class LadderController : Controller
     {
         private readonly ICatReadOnlyRepository _catReadOnlyRepository;
         private readonly ICatWriteOnlyRepository _catWriteOnlyRepository;
 
-        public ViewLadderController(
+        public LadderController(
             ICatReadOnlyRepository catReadOnlyRepository,
             ICatWriteOnlyRepository catWriteOnlyRepository)
         {
