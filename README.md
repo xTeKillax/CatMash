@@ -19,7 +19,7 @@ Le dossier Clients contiendra les différents clients possible (application angu
 ### Services
 #### CatManagement
 Il s'agit du premier service permettant d'interagir avec un chat.
-Il implémente une architecture hexagonal qui intègre trois projets différents.
+Il implémente une architecture hexagonal qui intègre trois projets différents avec un début d'approche DDD.
 
 ##### CatManagement.Infrastructure
 On retrouve ici un l'implémentation d'une couche de donnée. L'unique implémentation est le InMemory DataAccess qui va lire un json et stocker tout en mémoire au sein du context. On implémente ensuite les interfaces du repository pour un "cat".
